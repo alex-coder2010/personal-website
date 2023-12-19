@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    color: hsl(0, 0%, 12%);
+    background-color: hsl(0, 0%, 88%);
+    --navElementBackgroundColorHover: hsl(0, 0%, 78%);
+    --nightModeButtonBackgroundColor: hsl(0, 0%, 78%);
+    --nightModeButtonBackgroundColorHover: hsl(0, 0%, 68%);
+    transition: .25s;
+}
+
+body.dark{
+    background-color: hsl(0, 0%, 12%);
+    color: hsl(0, 0%, 88%);
+    --navElementBackgroundColorHover: hsl(0, 0%, 22%);
+    --nightModeButtonBackgroundColor: hsl(0, 0%, 22%);
+    --nightModeButtonBackgroundColorHover: hsl(0, 0%, 32%);
+    --listItemColor: hsl(0, 0%, 88%);
+}
+
+.container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+    right: 0;
+    height: 50%;
+    flex-direction: column;
+    transition: .5s;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 10%;
+}
+
+.header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding: 1rem;
+}
+
+.header nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+    list-style: none;
+    background-color: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .25s;
+    color: var(--listItemColor);
+    transition: .25s;
+}
+
+#home, #about, #services{
+    padding: .5rem;
+}
+
+#home:hover, #about:hover, #services:hover{
+    padding: 1rem;
+}
+
+.header nav ul li:hover{
+    background-color: var(--navElementBackgroundColorHover);
+}
+
+#nightModeButton{
+    background-color: var(--nightModeButtonBackgroundColor);
+    margin: 0;
+    padding: 0;
+    padding: .5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: .25s;
+}
+
+#nightModeButton:hover{
+    padding: 1rem;
+    transition: .25s;
+    background-color: var(--nightModeButtonBackgroundColorHover);
+}
