@@ -18,8 +18,7 @@ body{
     color: hsl(0, 0%, 12%);
     background-color: hsl(0, 0%, 88%);
     --navElementBackgroundColorHover: hsl(0, 0%, 78%);
-    --nightModeButtonBackgroundColor: hsl(0, 0%, 78%);
-    --nightModeButtonBackgroundColorHover: hsl(0, 0%, 68%);
+    --nightModeButtonBackgroundColorHover: var(--navElementBackgroundColorHover);
     transition: .25s;
 }
 
@@ -27,33 +26,44 @@ body.dark{
     background-color: hsl(0, 0%, 12%);
     color: hsl(0, 0%, 88%);
     --navElementBackgroundColorHover: hsl(0, 0%, 22%);
-    --nightModeButtonBackgroundColor: hsl(0, 0%, 22%);
-    --nightModeButtonBackgroundColorHover: hsl(0, 0%, 32%);
+    --nightModeButtonBackgroundColorHover: var(--navElementBackgroundColorHover);
     --listItemColor: hsl(0, 0%, 88%);
 }
 
-.container{
-    position: absolute;
+.titleContainer{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    left: 0;
-    right: 0;
-    height: 50%;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-direction: column;
     transition: .5s;
 }
 
+.title{
+    margin: 0;
+}
+
+#title2{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 70px;
+    color: hsl(267, 100%, 50%);
+}
+
+#title3{
+    font-size: 70px;
+}
+
 .header{
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
     left: 0;
     right: 0;
     top: 0;
-    height: 10%;
+    height: 10vh;
 }
 
 .header nav ul{
@@ -63,7 +73,7 @@ body.dark{
     text-align: center;
     margin: 0;
     padding: 0;
-    padding: 1rem;
+    padding-inline: 1rem;
 }
 
 .header nav ul li{
@@ -71,7 +81,7 @@ body.dark{
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 1rem;
+    margin-inline: 1rem;
     list-style: none;
     background-color: none;
     cursor: pointer;
@@ -81,11 +91,11 @@ body.dark{
     transition: .25s;
 }
 
-#home, #about, #services{
+#home, #about, #services, #projects{
     padding: .5rem;
 }
 
-#home:hover, #about:hover, #services:hover{
+#home:hover, #about:hover, #services:hover, #projects:hover{
     padding: 1rem;
 }
 
@@ -94,7 +104,7 @@ body.dark{
 }
 
 #nightModeButton{
-    background-color: var(--nightModeButtonBackgroundColor);
+    background-color: transparent;
     margin: 0;
     padding: 0;
     padding: .5rem;
@@ -108,4 +118,22 @@ body.dark{
     padding: 1rem;
     transition: .25s;
     background-color: var(--nightModeButtonBackgroundColorHover);
+}
+
+.main{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5rem;
+}
+
+#frontEnd{
+    border: none;
+    border-bottom: 5px solid blue;
+}
+
+#underliningSpace{
+    margin-inline: 1rem;
 }
