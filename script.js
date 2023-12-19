@@ -1,5 +1,4 @@
 const nightModeButton = document.querySelector("#nightModeButton");
-const ul = document.querySelector("")
 const body = document.body;
 let nightMode = true;
 
